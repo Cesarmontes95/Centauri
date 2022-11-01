@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename=('img/Logo V2.png'))  }}" type="image/x-icon">
+    <title>Intereses</title>
+</head>
+<body>
+    {{Correo}}
+    <li><a href="{{url_for('inicio')}}" class="btn">Inicio</a></li>
+    <table>
+        <tbody>
+            {% for dato in datos %}
+            <tr>
+                <td><img width="100" src="{{ url_for('img', imagen = dato[2]) }}" alt=""></td>
+
+                <td>{{dato[3] }}</td>
+                <td>{{dato[4] }}</td>
+                <td><a href="/wikic/{{dato[1]}}/{{dato[3]}}">Ver</a></td>
+                <td><a href="/delete/{{dato[1]}}">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

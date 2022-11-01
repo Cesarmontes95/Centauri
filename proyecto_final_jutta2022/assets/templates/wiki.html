@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centapedia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('css/wiki.css')) }}">  
+</head>
+<body>
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="#">Centapedia</a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('inicio') }} "><i class="fas fa-tachometer-alt"></i>Inicio</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('solar') }} "><i class="far fa-address-book"></i>Sistema Solar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('quizz') }} "><i class="far fa-clone"></i>Quizz</a>
+            </li>
+    
+            
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>{{ Nombre }}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+  <!-- Hero -->
+  <section class="et-hero-tabs">
+    <h1>Centapedia</h1>
+    <p> Descubre tu conocimiento acerca de la astronomia, en Centapedia</p>
+    <div class="et-hero-tabs-container">
+      <a class="et-hero-tab" href="#tab-es6">PLanetas</a>
+      <a class="et-hero-tab" href="#tab-flexbox">Estrellas</a>
+      <a class="et-hero-tab" href="#tab-react">Agujeros Negros</a>
+      <a class="et-hero-tab" href="#tab-angular">Nebulosas</a>
+      <a class="et-hero-tab" href="#tab-other">Otros</a>
+      <span class="et-hero-tab-slider"></span>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="et-main">
+
+    <section class="et-slide" id="tab-es6">
+      <table class="table-container">
+        <!-- Tabla que nos muestra los datos agregados -->
+        <tr>
+          <td>
+              <a href="/wiki">Todos</a>
+              {% for dato in tipos %}
+              <a href="/tipo/{{dato[1] }}">{{dato[1] }}</a>
+              {% endfor %}
+          </td>
+      </tr>
+  
+  
+      <table>
+          <tbody>
+              {% for dato in datos %}
+              <tr>
+                  <td><img width="100" src="static/img/{{dato[1] }}" alt=""></td>
+  
+                  <td>{{dato[2] }}</td>
+                  <td>{{dato[3] }}</td>
+                  <td><a href="/wikic/{{dato[0]}}/{{dato[2]}}">Ver</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </main>
+
+<script src="{{ url_for('static', filename=('js/wiki.js')) }}"></script>
+</body>
+</html>

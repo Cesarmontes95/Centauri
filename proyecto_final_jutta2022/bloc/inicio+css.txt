@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="uft-8">
+<title>Centaury Technologies</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/descarga.png') }}" type="image/x-icon">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+        <a href="#"><img src="{{ url_for('static', filename=('img/logo.png')) }}" alt="logo" /></a>
+        <div class="nav"><a href="">Quizz</a></div>
+        <div class="nav"><a href="">Noticias</a></div>
+        <div class="nav"><a href="">Wiki</a></div>
+        <div class="nav"><a href="{{ url_for('solar') }}">Sistema solar</a></div>
+        <div class="nav"><a href="{{ url_for('logout')}}">Cerrar Sesion</a></div>
+    </div>
+  
+      <div id="content">
+          <div id="splash">
+              <h1>Escapa tu mente terrenal y explora nuevos mundos! </h1>
+              <p>Here in <strong>Centaury</strong>, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum deserunt officiis id ea sit quis et, reprehenderit unde repellendus, corporis omnis! Dolore saepe natus est eveniet, tempora velit voluptatum quidem!</p>
+              <div>
+                <a href="{{ url_for('quizz') }}">Quizz</a>
+                </div>
+            </div> 
+        </div>
+
+    <script src="{{ url_for('static', filename='js/inicio.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html{
+  background-image: url('https://wallpapercave.com/wp/wp2494389.jpg') no-repeat;
+  height: 100%;
+}
+
+body {
+  
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    margin: 0;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #00534c;
+}
+
+#header {
+    height: 64px;
+    margin: 20px 0;
+    padding: 0 50px;
+}
+
+img {
+  width: 120px;
+  height: 60px;
+  font-size: 40px;
+  border: none;
+}
+
+.nav {
+  z-index: 3;
+    float: right;
+    height: 64px;
+    font-size: 1.5em;
+    padding: 10px 20px;
+}
+
+.nav a {
+  z-index: 2;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+.nav a:hover {
+  color: #fff;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.nav a::after {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
+}
+
+.nav a:hover::after,
+.nav a:focus::after {
+  opacity: 1;
+  width: 100%;
+}
+
+
+
+
+#content {
+    font-size: 2em;
+}
+
+#splash {
+
+    height: 700px;
+    background-position: center;
+    opacity: 0.75;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 30px 50px;
+}
+
+#splash a{
+  color: rgba(255, 255, 255, 0.5);
+  border: 2px solid;
+  margin: 16px 0;
+  padding: 12px;
+}
+
+#splash a:hover{
+  color: #fff;
+}
+
+#splash p, #splash h1 {
+    text-shadow: 1px 1px #363636;
+}
+
+#stuff {
+    padding: 30px 50px;
+    text-align: center;
+}
+
+#footer {
+    background-color: #398e72;
+    color: #FFF;
+    min-height: 100px;
+    padding: 50px;
+    font-size: 1.5em;
+}
+
+
+
+.button {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid #363636;
+    opacity: 1;
+    font-size: 0.75em;
+    cursor: pointer;
+}
+
+a .button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a .button:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+

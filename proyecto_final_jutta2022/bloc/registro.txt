@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
+</head>
+<body>
+
+    
+        
+
+
+
+
+    <h1 class="h1">Registrate Aqui</h1>
+    <div class="register">
+        
+        
+        <form enctype="multipart/form-data" action="/store" method="POST">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger" role="alert" id="alerta1">
+                {%for message in messages%}
+                {{message}}
+                {%endfor%}
+            </div>
+            {%endif%}
+            {%endwith%}
+
+            <h1>Registro</h1>
+
+            <div>
+                <input class="texto" type="email" id="Correo" name="Correo" placeholder="Correo" required>
+            </div>
+
+            <div>
+                <input class="texto" type="password" id="Password" name="Password" placeholder="Contraseña" required>
+            </div>
+
+            <div>
+                <input class="texto" type="text" id="Nombre" name="Nombre" placeholder="Nombre completo" required>
+            </div>
+
+            <div>
+                <button class="btn">Entrar</button>
+            </div>
+
+            
+        </form>
+        
+    </div>
+</body>
+</html>
+
+

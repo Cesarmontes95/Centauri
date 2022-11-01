@@ -1,0 +1,50 @@
+.wrapper {
+    max-width: 800px;
+    margin: 100px auto;
+  }
+  
+  .wrapper.flexContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  body {
+    text-align: center;
+  }
+  
+  .flexContainer {
+    display: flex;
+  }
+  
+  .outerContainer {
+    border: 1px solid black;
+    justify-content: space-around;
+  }
+  
+  .answers p {
+    border: 1px solid black;
+  }
+  
+  button {
+    align-self: center;
+    /* color: blue; */
+  }
+  
+  .card {
+    display: none;
+  }
+  
+  .currentQuestion.card {
+    display: flex;
+  }
+  
+  footer {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  footer p {
+    display: inline-block;
+  }
+  

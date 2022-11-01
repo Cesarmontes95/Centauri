@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estrellas</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename=('img/Logo V1.png'))  }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/planetas.css') }}">
+</head>
+<body>
+    <div class="frame">
+        <div style="color: #fff; text-align:center; z-index: 100; position: relative; top:20px; font-size:.8rem;">
+          Haga click en una estrella
+          <span style="position: absolute; left: 10px; cursor:pointer; color:#fff; font-size:.8rem;" onclick="GenerateGalaxy()">
+          Generar Galaxia
+        </span>
+
+  
+        </div>
+      </div>
+      <div class="frameInfo" id="sidePanelInfo">
+        <div class="sidePanel" id="sidePanel">
+          <span class="closeButton" onClick="OpenPanel()">CLOSE [X]</span>
+          <div id="sun" class="sun">
+          </div>
+          <div style="font-size: .7rem; text-align: center;">SELECT A HEADER TO LEARN MORE</div>
+      
+          <div class="infoContainer">
+            <div class="leftPanel">
+              <div class="infoType" style="margin-top: 20px;">
+                <span class="heavy" onClick="SetActiveInfo(this)" id="typeSpan">Tipo:<br /></span>
+                <span class="light small starType"></span>
+              </div>
+              <div class="infoColor" style="margin-top: 10px;">
+                <span class="heavy" onClick="SetActiveInfo(this)" id="colorSpan">Color<br /></span>
+                <span class="light small starColor"></span>
+              </div>
+              <div class="infoTemp" style="margin-top: 10px;">
+                <span class="heavy" id="tempSpan" onClick="SetActiveInfo(this)">Temperatura<br /></span>
+                <span class="light small starTemperature"></span>
+              </div>
+            </div>
+      
+            <div class="rightPanel">
+              <div class="infoMass" style="margin-top: 20px;">
+                <span class="heavy" id="massSpan" onClick="SetActiveInfo(this)">Masas Solares<br /></span>
+                <span class="light small starMass"></span>
+              </div>
+              <div class="infoRadius" style="margin-top: 10px;">
+                <span class="heavy" id="radiusSpan" onClick="SetActiveInfo(this)">Radio<br /></span>
+                <span class="light small starRadius"></span>
+              </div>
+              <div class="infoLumi" style="margin-top: 10px;">
+                <span class="heavy" id="lumiSpan" onClick="SetActiveInfo(this)">Luminosidad<br /></span>
+                <span class="light small starLumi"></span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="infoBottomMessage typeInfoMessage" id="typeInfo" style="display:none">
+          </div>
+          <div class="infoBottomMessage colorInfoMessage" id="colorInfo" style="display:none">
+          </div>
+          <div class="infoBottomMessage tempInfoMessage" id="tempInfo" style="display:none">
+          </div>
+          <div class="infoBottomMessage massInfoMessage" id="massInfo" style="display:none">
+          </div>
+          <div class="infoBottomMessage radiusInfoMessage" id="radiusInfo" style="display:none">
+          </div>
+          <div class="infoBottomMessage lumiInfoMessage" id="lumiInfo" style="display:none">
+          </div>
+        </div>
+    
+    </div>
+  <script src="{{ url_for('static', filename='js/planetas.js') }}"></script>
+</body>
+</html>

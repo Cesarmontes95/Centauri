@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename=('img/Logo V1.png'))  }}" type="image/x-icon">
+</head>
+<body>
+
+
+
+    <div class="container">
+        <header class="header">
+          <h1 id="title">El universo infinito que nos rodea</h1>
+          <p id="description">
+            <i>Apaga la luz, eleva la mirada y asómate al universo <br> en una noche estrellada.</i> 
+          </p>
+        </header>
+    
+    <form action="{{url_for('select')}}" method="POST" id="survey-form">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger" role="alert" id="alerta1">
+                {%for message in messages%}
+                {{message}}
+                {%endfor%}
+            </div>
+            {%endif%}
+            {%endwith%}
+
+        <h1>Inicia Sesion</h1>
+
+        <div class="form-group">
+          <label id="name-label" for="Nombre">Nombre</label>
+          <input
+            type="text"
+            name="Nombre"
+            id="Nombre"
+            class="form-control"
+            placeholder="Ingresa tu nombre"
+            required />
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Correo</label>
+          <input
+            type="email"
+            name="Correo"
+            id="Correo"
+            class="form-control"
+            placeholder="Ingresa tu Email"
+            required/>
+        </div>
+
+        <br>
+        
+        <div class="form-group">
+          <label id="number-label" for="Password">Contraseña</label>                 
+          <input
+            type="password"
+            name="Password"
+            id="Password"
+            min="5"
+            max="99"
+            class="form-control"
+            placeholder="ingresa tu Contraseña"
+          />
+        </div>
+           <br> 
+
+            <div>
+            <p>No tienes cuenta? <a href="{{url_for('registro')}}" class="user__a">Crea nueva cuenta</a></p>
+            </div>
+        <br>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Que comienze tú viaje
+          </button>
+
+        </div>
+      </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

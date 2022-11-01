@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos noticias</title>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-danger" role="alert" id="alerta1">
+                    {%for message in messages%}
+                        {{message}}
+                    {%endfor%}
+                </div>
+            {%endif%}
+    {%endwith%}
+
+    <h1>Subir datos Noticias</h1>
+    <form enctype="multipart/form-data" action="/datos_noticias" method="POST" id="survey-form">
+        Titulo:
+        <input type="text" name="titulo" id="titulo">
+        <br>
+        Descripcion:
+        <input type="text" name="descripcion" id="descripcion">
+        <br>
+        Foto 1:
+        <input type="file" name="foto1" id="foto1">
+        <br>
+        Foto 2:
+        <input type="file" name="foto2" id="foto2">
+        <br>
+        Foto 3:
+        <input type="file" name="foto3" id="foto3">
+        <br>
+        Foto 4:
+        <input type="file" name="foto4" id="foto4">
+        <br>
+        Tipo:
+        <input type="text" name="tipo" id="tipo">
+        <br>
+        <button type="submit" id="submit" class="submit-button">Insertar</button>
+    </form>
+</body>
+</html>

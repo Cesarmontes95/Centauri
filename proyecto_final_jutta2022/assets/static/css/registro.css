@@ -1,0 +1,202 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body {
+    background-image: url(https://external-preview.redd.it/PLar2TtNVPWb0KexqBrJohCeU_DCwoheRNlmWOkCkWY.jpg?auto=webp&s=13ac821f7aa90f934d592a2db675eb70c7c70c50);
+    background-attachment: fixed;
+    background-size:cover; 
+    background-position: center; 
+    color: white;    
+}
+
+.container {
+    text-shadow: 0 0 5px rgb(42, 60, 95);
+    border-radius: 10px;
+}
+
+#survey-form {
+    border-radius: 10px;
+    padding: 30px 35px;
+    background-color: rgba(65, 93, 129, 0.63);
+    width: 300px;
+    box-shadow: 0 0 15px rgb(10, 15, 49);
+    margin: auto;
+    margin-bottom: 60px;
+} 
+
+header {
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 0 40px 0;
+    text-shadow: 0 0 15px rgb(174, 190, 236);
+}
+
+#title {
+    margin-bottom: -10px;
+}
+
+header i{
+    font-size: 15px;
+}
+
+.form-control {
+    color: grey;
+    box-sizing: border-box;
+}
+
+.clue {
+    font-size: 12px;
+}
+
+.alert{
+  margin: 25px;
+  color: #000;
+  font-size: 17px;
+  text-align: center;
+}
+
+.form-group label {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.input-checkbox, .input-radio {
+    margin-right: 2.5px;
+}
+
+.form-group p {
+    margin-bottom: 8px;
+}
+
+#Nombre, #Correo, #Password, #dropdown, #most-like, #comments, #submit{
+    border: 0px;
+    border-radius: 5px;
+    min-width: 100%;
+    padding: 8px;
+    box-shadow: 0 0 5px rgb(42, 60, 95);
+    box-sizing: border-box;
+}
+
+#submit {
+    text-shadow: 0 0 5px rgb(241, 241, 241);
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgb(42, 60, 95);
+    background-color: rgba(16, 25, 34, 0.755);
+}
+
+#submit:hover {
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+@media screen and (max-width:450px) {
+    #survey-form {
+        max-width: 60vw;
+    }
+    header i{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0.67em 0;
+  text-align: center;
+}
+
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+a {
+  background-color: transparent;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+small {
+  font-size: 80%;
+}
+
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+
+
+img {
+  border-style: none;
+}
+
+
+button,
+input,
+optgroup,
+select {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+
+button,
+select { /* 1 */
+  text-transform: none;
+}

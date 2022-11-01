@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contenido.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename=('img/Logo V1.png'))  }}" type="image/x-icon">
+
+    <!--Links scripts-->
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-geo/1.9.1/d3-geo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+  <script src="https://threejs.org/examples/js/controls/DeviceOrientationControls.js"></script>
+  <script src="https://threejs.org/examples/js/effects/StereoEffect.js"></script>
+  <script src="https://threejs.org/examples/js/libs/tween.min.js"></script>
+  <!-- glowing effect scripts -->
+  <script src="https://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://threejs.org/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://threejs.org/examples/js/postprocessing/MaskPass.js"></script>
+  <script src="https://threejs.org/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://threejs.org/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://threejs.org/examples/js/shaders/FXAAShader.js"></script>
+  <script src="https://threejs.org/examples/js/shaders/ConvolutionShader.js"></script>
+  <script src="https://threejs.org/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="https://threejs.org/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+  
+
+<script id="vertexShader" type="x-shader/x-vertex">
+  varying vec3 vNormal;
+  void main() 
+  {
+    vNormal = normalize( normalMatrix * normal );
+    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+  }
+</script>
+
+<!-- fragment shader a.k.a. pixel shader -->
+<script id="fragmentShader" type="x-shader/x-vertex"> 
+varying vec3 vNormal;
+void main() 
+{
+  float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) ), 4.0 ); 
+    gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 ) * intensity;
+}
+</script>
+
+<section>
+  <h1>Bienvenido a Centauri</h1>
+  <p>Expanderemos tus conocimientos acerca de la astronomia y en general desde lo mas básico hasta lo mas infinito como el universo mismo.</p>
+  <p>Aventurate en esta nueva experiencia fuera del mas allá, conoce sobre el sistema solar, galaxias, estrellas y otros planetas</p>
+  <p>Preparate para una experiencia fuera de este mundo</p>
+  <a href="{{url_for('login')}}" class="btn">Iniciar Sesión</a>
+  <a href="{{url_for('registro')}}" class="btn">Registrarse</a>
+</section>
+
+<script src="{{ url_for('static', filename='js/contenido.js') }}"></script>
+</body>
+</html>

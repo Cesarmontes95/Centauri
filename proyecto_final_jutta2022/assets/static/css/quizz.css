@@ -1,0 +1,138 @@
+html { 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #whiteLine{width: 80%;
+border-color: rgba(0, 0, 0, 0);}
+
+
+
+.inicio{
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+}
+
+  #fullScreen {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  #gameWindow{
+      height: 75vh;
+      width: 75vw;
+      background-color: rgba(0, 0, 0, 0.95);
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+
+h1{
+    font-family: 'Turret Road', cursive;
+    color: white;
+    font-size: 10vh;
+    margin-top: 35px;
+}
+
+#begin:hover {
+background-color: black;
+color:white;
+cursor: pointer;
+border-color: white;
+}
+
+#begin{
+height: 10%;
+width: 25%;
+font-size: 2vh;
+font-family: 'Ubuntu Mono', monospace;
+border-radius: 15px;
+transition-duration: 0.5s;
+background-color: white;
+display: inline-block;
+}
+
+#questionBox{
+    width: 95%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#next{
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 2vh;
+    font-family: 'Ubuntu Mono', monospace;
+    border: none;
+    transition-duration: 0.5s;
+}
+
+#next:focus{
+    outline: none;
+}
+
+#question{
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 7.5vh;
+}
+
+#line1{
+    width: 95%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#line2{
+    width: 95%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.answerButtons{
+height: 75%;
+width: 40%;
+font-size: 4vh;
+font-family: 'Ubuntu Mono', monospace;
+transition-duration: 0.5s;
+background-color: rgba(0, 0, 0, 0);
+color: rgba(0, 0, 0, 0);
+border: none;
+}
+
+#score{
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgba(0, 0, 0, 0);
+    font-size: 4vh;
+  margin-bottom: 1px;
+}
+
+#questionQue{
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgba(0, 0, 0, 0);
+    font-size: 3vh;
+}

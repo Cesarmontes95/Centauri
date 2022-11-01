@@ -1,0 +1,482 @@
+body {
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+
+
+}
+
+.heavy {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.infoType > span:first-of-type {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.infoType:hover, .infoType.active {
+    color: #2196f3;
+}
+
+
+.infoColor > span:first-of-type {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+  
+.infoColor:hover, .infoColor.active {
+  color: #00bcd4;
+}
+
+
+.infoTemp > span:first-of-type {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.infoTemp:hover, .infoTemp.active {
+  color: #4caf50;
+}
+
+
+.infoMass > span:first-of-type {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.infoMass:hover, .infoMass.active {
+  color: #FFEB3B;
+}
+
+
+.infoRadius > span:first-of-type {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.infoRadius:hover, .infoRadius.active {
+  color: #FF9800;
+}
+
+
+.infoLumi > span:first-of-type {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.infoLumi:hover, .infoLumi.active {
+  color: #673AB7;
+}
+
+
+.infoBottomMessage{
+  margin-top: 15px;
+  position: absolute;
+  padding-top: 15px;
+  width: 95%;
+  white-space: pre-wrap;
+  font-weight: 100;
+}
+
+.infoBottomMessage .typeInfoMessage{
+  border-top: 3px solid #2196f3;
+}
+  
+.infoBottomMessage .colorInfoMessage{
+  border-top: 3px solid #00bcd4;
+}
+  
+.infoBottomMessage .tempInfoMessage{
+  border-top: 3px solid #4caf50;
+}
+  
+.infoBottomMessage .massInfoMessage{
+  border-top: 3px solid #FFEB3B;
+}
+  
+.infoBottomMessage .radiusInfoMessage{
+  border-top: 3px solid #FF9800;
+}
+  
+.infoBottomMessage .lumiInfoMessage{
+  border-top: 3px solid #673AB7;
+}
+
+
+.frameInfo {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.frame {
+  width: 100vw;
+  height: 100vh;
+}
+
+.frame .blur {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='3' /></filter></svg>#svgMask");
+}
+
+
+.infoContainer {
+  display: inline-flex;
+  text-align: center;
+  width: 56%;
+  left: 23%;
+  position: relative;
+  color: #ccc;
+}
+
+.leftPanel {
+  width: 50%;
+}
+
+.rightPanel {
+  width: 50%;
+}
+
+.sidePanel {
+  overflow-y: scroll;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  right: 5%;
+  top: -5%;
+  background-color: rgba(20, 20, 20, .9);
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transition: all 1s;
+  padding: 15px;
+}
+
+.penInfo {
+  overflow-y: scroll;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  right: 5%;
+  top: -5%;
+  background-color: rgba(20, 20, 20, .9);
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transition: all 1s;
+  padding: 15px;
+}
+
+.star {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.star:hover {
+  cursor: pointer;
+}
+
+.star .blue {
+  background-color: #00f;
+  box-shadow: 0 0 20px #589bff, 0 0 20px #afc8ee;
+}
+
+.star .blueWhite {
+  background-color: #55f;
+  box-shadow: 0 0 20px #70aeff, 0 0 40px #b7d6ff;
+}
+
+.star .white {
+  background-color: #fff;
+  box-shadow: 0 0 20px #accdff, 0 0 40px #dfecff;
+}
+
+.star .yellowWhite {
+  background-color: #fff585;
+  box-shadow: 0 0 20px #f7f5ff, 0 0 40px #f7f5ff;
+}
+
+.star .yellow {
+  background-color: #ff0;
+  box-shadow: 0 0 20px #fff0d9, 0 0 50px #fffcf7;
+}
+
+.star .yellowOrange {
+  background-color: #ffae00;
+  box-shadow: 0 0 20px #ffdb3a, 0 0 50px #feeda1;
+}
+
+.star .orangeRed {
+  background-color: #ff5a00;
+  box-shadow: 0 0 20px #fa8a4a, 0 0 50px #b9a018;
+}
+
+
+.closeButton {
+  font-size: 0.8rem;
+  float: right;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #f44336;
+}
+
+
+.sun {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 40px auto;
+}
+
+.sun .orangeRed {
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 211, 123, 1) 0%,
+    rgba(255, 210, 123, 1) 1%,
+    rgba(255, 136, 78, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 211, 123, 1) 0%,
+    rgba(255, 210, 123, 1) 1%,
+    rgba(255, 136, 78, 1) 100%
+  );
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 211, 123, 1) 0%,
+    rgba(255, 210, 123, 1) 1%,
+    rgba(255, 136, 78, 1) 100%
+  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#ffd37b",
+      endColorstr="#b3ff884e",
+      GradientType=1
+    );
+
+  box-shadow: 0 0 50px #fa8a4a, 0 0 50px #b9a018;
+}
+
+.sun .blue {
+  background: rgb(88, 155, 255);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(88, 155, 255, 1) 0%,
+    rgba(68, 92, 196, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(88, 155, 255, 1) 0%,
+    rgba(68, 92, 196, 1) 100%
+  );
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(88, 155, 255, 1) 0%,
+    rgba(68, 92, 196, 1) 100%
+  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#589bff",
+      endColorstr="#445cc4",
+      GradientType=1
+    );
+
+  box-shadow: 0 0 50px #589bff, 0 0 50px #afc8ee;
+}
+
+.sun .blueWhite {
+  background: rgb(112, 174, 255);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(112, 174, 255, 1) 0%,
+    rgba(74, 136, 168, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(112, 174, 255, 1) 0%,
+    rgba(74, 136, 168, 1) 100%
+  );
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(112, 174, 255, 1) 0%,
+    rgba(74, 136, 168, 1) 100%
+  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#70aeff",
+      endColorstr="#4a88a8",
+      GradientType=1
+    );
+
+  box-shadow: 0 0 50px #70aeff, 0 0 50px #b7d6ff;
+}
+
+.sun .white {
+  background: rgb(221, 235, 255);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(221, 235, 255, 1) 0%,
+    rgba(172, 205, 255, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(221, 235, 255, 1) 0%,
+    rgba(172, 205, 255, 1) 100%
+  );
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(221, 235, 255, 1) 0%,
+    rgba(172, 205, 255, 1) 100%
+  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#ddebff",
+      endColorstr="#accdff",
+      GradientType=1
+    );
+
+  box-shadow: 0 0 50px #accdff, 0 0 50px #dfecff;
+}
+
+.sun .yellowWhite {
+  background: rgb(247, 245, 255);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(247, 245, 255, 1) 0%,
+    rgba(255, 255, 219, 1) 100%
+  );
+
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(247, 245, 255, 1) 0%,
+      rgba(255, 255, 219, 1) 100%
+    );
+    background: radial-gradient(
+      ellipse at center,
+      rgba(247, 245, 255, 1) 0%,
+      rgba(255, 255, 219, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#f7f5ff",
+        endColorstr="#ffffdb",
+        GradientType=1
+      );
+
+    box-shadow: 0 0 50px #f7f5ff, 0 0 50px #f7f5ff;
+  }
+
+  .sun .yellow {
+    background: rgb(255, 240, 217);
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 240, 217, 1) 0%,
+      rgba(255, 221, 170, 1) 100%
+    );
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 240, 217, 1) 0%,
+      rgba(255, 221, 170, 1) 100%
+    );
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 240, 217, 1) 0%,
+      rgba(255, 221, 170, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#fff0d9",
+        endColorstr="#ffddaa",
+        GradientType=1
+      );
+
+    box-shadow: 0 0 50px #fff0d9, 0 0 50px #fffcf7;
+  }
+
+  .sun .yellowOrange {
+    background: rgb(255, 219, 58);
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 219, 58, 1) 0%,
+      rgba(239, 153, 55, 1) 100%
+    );
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 219, 58, 1) 0%,
+      rgba(239, 153, 55, 1) 100%
+    );
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 219, 58, 1) 0%,
+      rgba(239, 153, 55, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#ffdb3a",
+        endColorstr="#ef9937",
+        GradientType=1
+      );
+
+    box-shadow: 0 0 50px #ffdb3a, 0 0 50px #feeda1;
+  }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

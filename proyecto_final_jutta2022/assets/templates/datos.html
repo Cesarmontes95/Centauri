@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger" role="alert" id="alerta1">
+                {%for message in messages%}
+                {{message}}
+                {%endfor%}
+            </div>
+            {%endif%}
+            {%endwith%}
+
+    <h1>Subir datos Wiki</h1>
+    <form enctype="multipart/form-data" action="/datos" method="POST" id="survey-form">
+        Foto:
+        <input type="file" name="foto" id="foto">
+        <br>
+        Nombre:
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        Tipo:
+        <input type="text" name="tipo" id="tipo">
+        <br>
+        Tamaño:
+        <input type="text" name="size" id="size">
+        <br>
+        Temperatura:
+        <input type="text" name="temperatura" id="temperatura">
+        <br>
+        Descripcion:
+        <textarea name="descripcion" id="descripcion"></textarea>
+        <br>
+        <button type="submit" id="submit" class="submit-button">Insertar</button>
+    </form>
+</body>
+</html>

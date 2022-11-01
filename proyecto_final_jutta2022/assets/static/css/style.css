@@ -1,0 +1,174 @@
+@import url("https://bootswatch.com/flatly/bootstrap.min.css");
+
+body {
+  padding-top: 50px;
+  background: #000;
+  color: #fff;
+}
+
+nav{
+  display: flex-end;
+}
+
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    background:#ecf0f1;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -40%;
+  }
+
+  .row-offcanvas-left.active {
+    left: 40%;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 40%;
+    margin-left: 12px;
+  }
+}
+
+#sidebar {
+    padding:15px;
+    margin-top:10px ;
+}
+
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+poster{
+  height: 300px;
+    width:1000px ;
+}
+.imauni{
+  height: 250px;
+    width:250px ;
+float:right;
+  margin-right:-350px;
+  margin-top:-160px;
+  border-radius: 200px;
+}
+.imauni:hover {-webkit-transform:scale(1.5);transform:scale(1.5);
+}
+.imauni {overflow:hidden;}
+.uni{
+  text-align:justify;
+  margin-top:50px;
+  font-size:25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font: bold;
+  
+  
+}
+code{
+  font-family: 'Roboto Condensed', sans-serif;
+  
+  font: bold;
+  
+}
+
+.ima2{
+  height: 150px;
+    width:150px ;
+float:right;
+  margin-right:-300px;
+  margin-top:-200px;
+  border-radius: 200px;
+}
+.ima2:hover {-webkit-transform:scale(1.5);transform:scale(1.5);}
+.ima2 {overflow:hidden;}
+
+.ima3{
+  height: 150px;
+    width:150px ;
+float:right;
+  margin-right:-300px;
+  margin-top:-144px;
+  border-radius: 200px;
+}
+.ima3:hover {-webkit-transform:scale(1.5);transform:scale(1.5);}
+.ima3 {overflow:hidden;}
+
+ .ima4{
+  height: 150px;
+    width:150px ;
+float:right;
+  margin-right:-300px;
+  margin-top:-144px;
+  border-radius: 200px;
+}
+.ima4:hover {-webkit-transform:scale(1.5);transform:scale(1.5);}
+.ima4 {overflow:hidden;}
+
+ .ima5{
+  height: 150px;
+    width:150px ;
+float:right;
+  margin-right:-300px;
+  margin-top:-180px;
+  border-radius: 200px;
+}
+ .ima5:hover {-webkit-transform:scale(1.5);transform:scale(1.5);}
+.ima5 {overflow:hidden;}
+
+ .ima6{
+  height: 250px;
+    width:350px ;
+float:right;
+  margin-right:-400px;
+  margin-top:-370px;
+  border-radius: 10px;
+  
+}
+.ima6:hover {-webkit-transform:scale(0.80);transform:scale(0.80);}
+.ima6 {overflow:hidden;}
+
+   .ima7{
+  height: 250px;
+    width:350px ;
+float:right;
+  margin-right:-400px;
+  margin-top:-300px;
+     border-radius: 10px;
+}
+     .ima7:hover {-webkit-transform:scale(1.1);transform:scale(1.1);}
+.ima7 {overflow:hidden;}
+  

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <h1 class="h1">Bienvenido a Centaury</h1>
+    <div>
+        
+        <form action="{{url_for('select')}}" method="POST" class="login">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger" role="alert" id="alerta1">
+                {%for message in messages%}
+                {{message}}
+                {%endfor%}
+            </div>
+            {%endif%}
+            {%endwith%}
+
+            <h1>Iniciar sesion</h1>
+
+            <div>
+                <input class="texto" type="email" name="Correo" id="Correo" placeholder="Correo requerido" required>
+            </div>
+
+            <div>
+                <input class="texto" type="password" name="Password" id="Password" placeholder="Password requerido" required>
+            </div>
+
+            <div>
+                <input class="texto" type="text" name="Nombre" id="Nombre" placeholder="Nombre requerido" required>
+            </div>
+
+            <div>
+                <p>No tienes cuenta? <a href="{{url_for('registro')}}">Crea nueva cuenta</a></p>
+            </div>
+
+            <div>
+                <input class="button" type="submit" value="Login">
+            </div>
+
+        </form>
+
+        
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+css
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;    
+    background-color: #004bff;
+    background-image: url('../img/universo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:initial;
+    background-attachment: fixed;
+    
+}
+
+
+.login {
+    width: 480px;
+    height: 500px;
+    /*background: #3d1365;*/
+    /*background :linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);*/
+    background :linear-gradient(147deg, #421296 0%, #0f0cbb 74%);
+    margin: auto;
+    margin-top: 80px;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid #000;
+    border-left: 4px solid #000;
+    padding: 30px;
+}
+
+.h1{
+    margin: 25px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    height: 55px;
+    border-bottom: 1px solid #fff;
+}
+
+.alert{
+    margin: 25px;
+    color: #000;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.login h1{
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+}
+
+.login i {
+    align-items: center;
+    width: 20px;
+    height: 30px;
+    padding: 10px 10px;
+    background: #1293de;
+    font-size: 25px;
+}
+
+.login i:hover {
+    background: gray;
+}
+
+.texto {
+    margin: 4px;
+    width: 80%;
+    height: 22px;
+    color: #f1f1f1;
+    border: 1px solid #1293de;
+    background: #212121;
+    font-size: 15px;
+    padding: 12px 5px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.button {
+    border: none;
+    width: 100%;
+    height: 44px;
+    background : #6322d4;
+    /*background: #101042;*/
+    color: wheat;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.button:hover {
+    background: white;
+    color: #000;
+}
+
+.login a {
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

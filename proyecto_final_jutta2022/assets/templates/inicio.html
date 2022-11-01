@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centauri</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename=('css/inicio.css'))  }}">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="shortcut icon" href="{{ url_for('static', filename=('img/Logo V1.png'))  }}" type="image/x-icon">
+</head>
+<body>
+  
+  <nav id="navbar">
+    
+    
+  <br>
+    <header class="indice"> <br>INDICE
+    <br>
+    
+    <div class="navbar navbar-fixed-top navbar-default" role="navigation">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              {{ Nombre }}
+          </div>
+          <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                  <li><a href="{{ url_for('solar') }}">Sistema Solar</a></li>
+                  <li><a href="{{ url_for('quizz') }}">Quizz</a></li>
+              
+                  <li><a href="/wiki">Wiki</a></li>
+                  <li><a href="/intr/{{Correo}}">Interes</a></li>
+                  <li><a href="/noticias">Noticias</a></li>
+                  <li><a href="/logout">Logout</a></li>
+              </ul>
+          </div>
+          <!-- /.nav-collapse -->
+      </div>
+      <!-- /.container -->
+</div>
+    </header>
+
+      <!--<ul>
+   
+        <li><a class="nav-link" href="#El_Universo">El Universo</a></li>
+
+        <li><a class="nav-link" href="{{ url_for('solar') }}">Sistema Solar</a></li>
+      
+        <li><a class="nav-link" href="#Nuestra_Tierra">Nuestra Tierra</a></li>
+      
+        <li><a class="nav-link" href="{{ url_for('quizz') }} ">quizz</a></li>
+
+
+
+        <li><a class="nav-link" href="{{ url_for ('logout')}}">Cerrar sesion</a></li>
+      </ul>-->
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+
+            <li><a class="nav-link" href="#El_Universo">El Universo</a></li>
+
+            <li><a class="nav-link" href="#El_Universo">Origen de el Universo</a></li>
+
+            <li><a class="nav-link" href="#El_Sistema_Solar">El Sistema Solar</a></li>
+          
+            <li><a class="nav-link" href="#Nuestra_Tierra">Nuestra Tierra</a></li>
+            
+        </ul>
+    </div>
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="El_Universo">
+      <header class="uni"><br>Bienvenido {{Nombre}} a Centauri </header>
+      <header class="uni"><br>Bienvenido {{Nombre}} a Centauri </header>
+      <header class="uni"><br>Informacion Principal</header>
+      <header class="uni"><br>El Universo</header>
+        <p>La fascinación por el Universo ha acompañado al hombre desde sus primeros años como especie. Más arriba de nosotros se encuentra un espacio enigmático, surcado por fenómenos brillantes que despiertan nuestra imaginación y nos han llamado a investigar para comprender un poco más la existencia del mundo.</p> 
+        <img class="imauni" src="https://www.joeirizarrynoticiascristianas.com/wp-content/uploads/2019/04/07A9CC95-A506-4B2A-AD2C-367C18144DDB.jpeg" alt="logo">
+        <p>Conocer el Universo es más que ver lo que pasa ante nuestros ojos. Las estrellas, las galaxias, los planetas, los satélites, los asteroides y demás cuerpos celestes esconden secretos fascinantes capaces de despertar la pasión en las personas.</p>
+      
+      <code>
+        <li> <a href="#" class="links"> "Hola Universo"</a></li>
+      </code>
+      
+
+    </section>
+    
+    <section class="main-section" id="Origen_del_Universo">
+      
+    <header class="uni">Origen del Universo</header>
+      <p>Algunas de las preguntas más complejas que se ha hecho la Humanidad están relacionadas con el inicio de todo lo que conoce y lo rodea: ¿Tuvo inicio el Universo? ¿Cómo se originó? ¿Desde hace cuánto tiempo existe? Hoy en día, con toda la tecnología y los avances científicos que existen, no ha sido posible comprobar con exactitud las teorías que se barajan.</p>
+      <img class="ima2" src="https://www.geoenciclopedia.com/wp-content/uploads/2016/05/busqueda-circ.png" alt="logo">
+     <br>
+      
+      <p>Pero seguramente has oído hablar de la Teoría del Big Bang. Se trata de la más famosa y ampliamente aceptada por la comunidad científica, y sugiere que el Universo está en continua expansión. Esto se ha probado al observar las estrellas y las galaxias, que se están alejando unas de otras a medida que pasa el tiempo.</p>
+       <img class="ima3" src="https://www.geoenciclopedia.com/wp-content/uploads/2016/05/big-bang-circ.png" alt="logo">
+      <br>
+      <br>
+      <p>De hecho, las estrellas son casi tan viejas como el Universo entero. Los científicos las han clasificado según su temperatura, brillo, color, tamaño y otros factores, y ya desde la antigüedad los hombres dieron rienda suelta a su imaginación y otorgaron nombres a los grupos de estrellas mejor reconocidos. Así pues, las constelaciones son parte inherente del estudio astronómico y no solo astrológico.</p>
+      <img class="ima4" src="https://www.geoenciclopedia.com/wp-content/uploads/2016/05/estrellas-circ.png" alt="logo">
+      <br>
+      <p>De todas las galaxias, la Vía Láctea es la mejor conocida; por supuesto, porque es la que alberga nuestro Sistema Solar. Gracias a satélites artificiales, sondas y naves, el ser humano ha logrado observar más galaxias y planetas situados a distancias inimaginables. El interés también lo ha llevado a explorar el entorno más allá de nuestro planeta y a realizar viajes interplanetarios. Desde Yuri Gagarin, el primer hombre en el espacio, ya nada volvió a ser igual en la exploración espacial.</p>
+      <img class="ima4" src="https://www.geoenciclopedia.com/wp-content/uploads/2016/05/galaxias-circ.png" alt="logo">
+      <code>
+        <li><a href="#" class="links">   "Hola Universo"</a></li>
+      </code>
+      
+
+    </section>
+    
+    <section class="main-section" id="El_Sistema_Solar">
+    <header class="uni">El Sistema Solar</header>
+      <p>La comprensión del Sistema Solar es relativamente reciente, pero no está finalizada. Apenas en 2006 los científicos reclasificaron a Plutón y dejaron de considerarlo planeta, ya que han descubierto numerosos cuerpos de tamaño similar y características parecidas que lo alejan de los demás planetas.</p>
+      <p>Hoy en día, sabemos que el Sistema Solar se compone de 1 estrella central llamada Sol, 8 planetas, asteroides, planetas enanos, satélites naturales, cometas y muchos otros cuerpos celestes. Al igual que en el caso del Universo, su formación ha sido motivo de profundas y extensas investigaciones, pero se acepta que el Sol se originó primero y a partir de él se formaron los cuerpos que en la actualidad orbitan a su alrededor.
+        Hoy nos parece gracioso que alguna vez se haya creído que la Tierra estaba en el centro del Universo y que los demás planetas giraban en torno a ella, pero pasaron varios siglos antes de que Nicolás Copérnico presentara su teoría heliocéntrica.<br><br>El interés por el Sistema Solar también reside en el hecho de encontrar otros planetas e incluso de encontrar vida en ellos. Hasta la actualidad, nuestro planeta es el único del que se sabe que alberga seres vivos, pero no se ha descartado la posibilidad de que no estemos solos.</p>
+      <img class="ima6" src="https://th.bing.com/th/id/R.e584b178a11a6678efa865c1c95f62d8?rik=kdlf3r7Bw3dkZQ&riu=http%3a%2f%2fimagenes.4ever.eu%2fdata%2fdownload%2fnaturaleza%2funiverso%2fsistema-solar%2c-sol%2c-planetas-150846.jpg&ehk=ilz0KR3R69LkSeJTgbhIVkBWTBCpMVBOEnkA4kauUxQ%3d&risl=1&pid=ImgRaw&r=0" alt="logo">
+      <code>
+        <li><a href="#" class="links"> "Hola sistema solar"</a></li>
+      </code>
+      
+
+    </section>
+    
+    <section class="main-section" id="Nuestra_Tierra">
+    <header class="uni">Nuestra Tierra</header>
+      
+      <p>El planeta de la vida ocupa un lugar privilegiado en el Universo. No es el más grande, no es el más pesado y tampoco es el más brillante, pero es nuestro y es hermoso. Ocupa una posición clave en el Sistema Solar: como el tercer planeta más cercano al Sol, recibe un calor adecuado para soportar la vida.</p>
+      
+      <p>La edad de la Tierra se calcula en 4.5 miles de millones años. Su atmósfera impide frecuentes colisiones con asteroides y su satélite natural, la luna, es responsable de fenómenos como las mareas. Desde la superficie que pisamos, hemos sido testigos de fascinantes fenómenos naturales que nos recuerdan nuestro pequeño papel en el Universo. Los eclipses, los movimientos de rotación y traslación, los equinoccios y solsticios y muchos más son evidencia de todo lo que acontece en el exterior y de lo que no tenemos ningún poder.</p>
+      <img class="ima7" src="https://image.freepik.com/free-photo/earth-galaxy-elements-this-image-furnished-by-nasa_335224-750.jpg" alt="logo">
+      
+      <code>
+        <li><a href="#" class="links">  "Hola Tierra"</a></li>
+      </code>
+
+    </section>
+    <!--<center><a  href="https://www.geoenciclopedia.com/">Más Información</a></center>-->
+  </main>
+</body>
+</html>
